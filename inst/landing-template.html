@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <style>
+
+      body {
+    padding: 0;
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.box {
+  border: 1px solid black;
+  border-radius: 0.75em;
+}
+
+#get-started {
+    border-color: black;
+    background-color: #868a8d;
+    border-width: 0.12em;
+    color: white;
+}
+
+.nav-link.active{
+ background-color: #868a8d !important;
+}
+
+</style>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-md">
+  <a class="navbar-brand" href="#"> {{ navBarTitle }} </a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav nav nav-pills mr-auto">
+      <li class="nav-item" role = "presentation">
+        <a class="nav-link active" id="home-tab" data-toggle = "pill" data-target = "#home" aria-controls="home" aria-selected = "true">Home</a>
+      </li>
+      <li class="nav-item" role = "presentation">
+        <a class="nav-link" id="consent-tab" data-toggle = "pill" data-target = "#consent" aria-controls="consent" aria-selected = "false">Consent</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<div class = "tab-content">
+  <div class = "tab-pane active" id = "home" role = "tabpanel" aria-labelledby="home-tab">
+    <div class = "container-fluid">
+
+  <h1 class = "mt-4">Perform a Neuroscience Task</h1>
+
+  <div class = "row justify-content-center my-5">
+      <div class = "col-sm-3 box mx-4 p-4 text-center">
+        You have been selected to participate in a task that does...
+      </div>
+      <div class = "col-sm-3 box mx-4 p-4 text-center">
+       <center>
+          <p>This task will take approximately ... it is optional...</p>
+        </center>
+      </div>
+      <div class = "col-sm-3 box mx-4 p-4 text-center">
+       <center>
+          <p>You will be compensated ... </p>
+        </center>
+      </div>
+  </div>
+
+  <div class = "row justify-content-center">
+    <button id = "get-started" class = "btn btn-lg" type = "button" onclick = "$('#consent-tab').trigger('click')">Get Started!</button>
+  </div>
+
+
+</div>
+  </div>
+  <div class = "tab-pane" id = "consent" role = "tabpanel" aria-labelledby="consent-tab">
+
+    <div class = "container-fluid">
+      <h1 class = "mt-4">Informed Consent</h1>
+
+    <div class = "row justify-content-center my-5">
+      <div class = "col-sm-3 box mx-4 p-4 text-center">
+        Informed consent info here...
+      </div>
+    </div>
+
+      <div class = "row justify-content-center">
+
+    <button id = "yes-consent" class = "btn btn-lg box mx-3" type = "button" onclick = "window.location.replace('/tasks/sborg/gambling/sborg6-1.html')">
+      <i class="fa fa-check" role="presentation" aria-label="check icon"></i>
+      Yes, I agree to participate.
+    </button>
+
+    <button id = "no-consent" class = "btn btn-lg box mx-3" type = "button" onclick = "$('#home-tab').trigger('click')">
+      <i class="fa fa-ban" role="presentation" aria-label="ban icon"></i>
+      No, I do not agree to participate.
+    </button>
+
+  </div>
+    </div>
+  </div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+  </body>
+</html>
