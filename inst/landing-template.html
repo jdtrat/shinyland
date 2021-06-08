@@ -7,10 +7,15 @@
 
     <style>
 
+html {
+  overflow: auto !important;
+}
+
 body {
     padding: 0;
     margin: 0;
     background-color: #f5f5f5;
+    overflow: auto !important;
 }
 
 .nav-link,
@@ -86,7 +91,7 @@ body {
       {{{ description_text }}}
   </div>
 
-  <div class = "row justify-content-center">
+  <div class = "row justify-content-center mb-5">
     <button id = "get-started" class = "btn btn-lg" type = "button" onclick = "$('#consent-tab').trigger('click')">Get Started!</button>
   </div>
 
@@ -104,9 +109,9 @@ body {
       </div>
     </div>
 
-      <div class = "row justify-content-center">
+      <div class = "row justify-content-center mb-5">
 
-    <button id = "yes-consent" class = "btn btn-lg box mx-3" type = "button" onclick = "window.location.replace(' {{{task_url}}}')">
+    <button id = "yes-consent" class = "btn btn-lg box mx-3 mb-3" type = "button" onclick = "window.location.replace(' {{{task_url}}}')">
       <i class="fa fa-check" role="presentation" aria-label="check icon"></i>
       Yes, I agree to participate.
     </button>
